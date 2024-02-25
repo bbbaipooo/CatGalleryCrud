@@ -39,9 +39,9 @@ const upload = multer({
 });
 
 const db = mysql.createConnection({
-    host: "localhost",
+    host: "viaduct.proxy.rlwy.net",
     user: "root",
-    password: "password1234",
+    password: "1fD1c2BA1bG1b4dcFF4156D3h1BAhafa",
     database: "catgallery"
 })
 
