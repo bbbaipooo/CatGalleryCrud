@@ -42,7 +42,7 @@ function UpdateCat() {
         axios.put(import.meta.env.VITE_REACT_APP_API_URL + `/updateCat/${catId}`, formData)
         .then((res)=>{
             console.log(res)
-            // navigate('/')
+            navigate('/')
         }) 
         .catch(err => {
             console.log(err)
