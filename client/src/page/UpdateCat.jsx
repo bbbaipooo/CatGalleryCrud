@@ -130,7 +130,7 @@ function UpdateCat() {
                 <div key={val.id}>
                   <div className='sm:w-[340px] w-[280px] h-[355px] rounded-3xl  relative  bg-[#e6dfc5] sm:mb-0 mb-10'>
                     <div className='flex justify-center'>
-                      <img className='w-[170px] h-[170px] mt-5 z-20 rounded-full' src={`http://localhost:8800/images/`+val.image} alt="cat1" />
+                      <img className='w-[170px] h-[170px] mt-5 z-20 rounded-full' src={`https://catgallerycrud-production.up.railway.app/images/`+val.image} alt="cat1" />
                     </div>
                     <div className='absolute top-[110px] z-0 bg-[#7b735d] sm:w-[340px] w-[280px] pb-3 rounded-3xl '>
                       <div className='mt-[95px] '>

@@ -120,7 +120,7 @@ function Home() {
                 <div className='sm:w-[340px] w-[250px] sm:h-[355px] h-[330px] rounded-3xl  relative  bg-[#d0cec7] '>
                   {/* bg-[#d0cec7] */}
                   <div className='flex justify-center'>
-                    <img className='sm:w-[170px] w-[125px] sm:h-[170px] h-[125px] mt-5 z-20 rounded-full' src={`http://localhost:8800/images/`+val.image} alt="cat1" />
+                    <img className='sm:w-[170px] w-[125px] sm:h-[170px] h-[125px] mt-5 z-20 rounded-full' src={`https://catgallerycrud-production.up.railway.app/images/`+val.image} alt="cat1" />
                   </div>
                   <div className='absolute top-[110px] z-0 bg-[#f4eedc] sm:w-[340px] w-[250px] rounded-3xl '>
                     <div className='sm:mt-[90px] mt-[70px]'>
