@@ -20,7 +20,7 @@ function UpdateCat() {
     useEffect(() => {
       const getCats = async () => {
         try {
-          const res = await axios.get(process.env.REACT_APP_API_URL + `/cats`);
+          const res = await axios.get(import.meta.env.VITE_REACT_APP_API_URL + `/cats`);
           setCats(res.data);
         } catch (err) {
           console.log(err);
@@ -39,7 +39,7 @@ function UpdateCat() {
         formData.append("temperament", values.temperament);
         formData.append("image", values.image);
 
-        axios.put(process.env.REACT_APP_API_URL + `/updateCat/${catId}`, formData)
+        axios.put(import.meta.env.VITE_REACT_APP_API_URL + `/updateCat/${catId}`, formData)
         .then((res)=>{
             console.log(res)
             // navigate('/')

@@ -12,7 +12,7 @@ function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(process.env.REACT_APP_API_URL + `/login`, values)
+        axios.post(import.meta.env.VITE_REACT_APP_API_URL + `/login`, values)
             .then(res => {
                 if (res.data.Status === "Success") {
                     console.log(res)
