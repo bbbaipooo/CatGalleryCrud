@@ -8,7 +8,7 @@ function Login() {
         password: ''
     })
     const navigate = useNavigate()
-    // axios.defaults.withCredentials=true;
+    axios.defaults.withCredentials=true;
 
     const handleSubmit = (event) => {
         event.preventDefault();

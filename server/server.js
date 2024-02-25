@@ -15,12 +15,15 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.use(cors({
-    origin: ["https://cat-gallery-crud.vercel.app"]
+    origin: ["https://cat-gallery-crud.vercel.app"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true 
+    
 }));
 
 app.use(cookieParser());
 
-app.use("/images",express.static('public'))
+app.use(express.static('public'))
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
