@@ -23,7 +23,7 @@ function AddCat() {
             formData.append("temperament", values.temperament);
             formData.append("image", values.image);
 
-            axios.post('http://localhost:8800/createCat', formData)
+            axios.post(process.env.REACT_APP_API_URL + `/createCat` , formData)
             .then((res)=>{
                 console.log(res)
                 navigate('/')

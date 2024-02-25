@@ -12,7 +12,7 @@ function Home() {
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get('http://localhost:8800/verify')
+    axios.get(process.env.REACT_APP_API_URL + `/verify`)
       .then(res => {
         console.log(res.data.Status)
         if (res.data.Status === "Success") {
@@ -28,7 +28,7 @@ function Home() {
   })
 
   const handleDelete = () => {
-    axios.get('http://localhost:8800/logout')
+    axios.get(process.env.REACT_APP_API_URL + `/logout`)
       .then(res => {
         location.reload(true);
       }).catch(err => console.log(err))
@@ -38,7 +38,7 @@ function Home() {
   useEffect(() => {
     const getCats = async () => {
       try {
-        const res = await axios.get('http://localhost:8800/cats');
+        const res = await axios.get(process.env.REACT_APP_API_URL + `/cats`);
         setCats(res.data);
       } catch (err) {
         console.log(err);
@@ -48,7 +48,7 @@ function Home() {
   }, []);
 
   const deleteCat = (id) => {
-    axios.delete(`http://localhost:8800/deleteCat/${id}`).then((response) => {
+    axios.delete(process.env.REACT_APP_API_URL + `/deleteCat/${id}` ).then((response) => {
         setCats(
             cats.filter((val) => {
                 return val.id != id

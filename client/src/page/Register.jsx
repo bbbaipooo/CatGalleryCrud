@@ -11,7 +11,7 @@ function Register() {
     const navigate = useNavigate()
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:8800/register', values)
+        axios.post(process.env.REACT_APP_API_URL + `/register`, values)
             .then(res => {
                 if (res.data.Status === "Success") {
                     navigate('/login')
