@@ -10,7 +10,7 @@ function Home() {
   const [searchQuery, setSearchQuery] = useState('');
 
 
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
   useEffect(() => {
     axios.get(import.meta.env.VITE_REACT_APP_API_URL + `/verify`)
       .then(res => {
