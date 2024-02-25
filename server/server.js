@@ -48,6 +48,10 @@ const db = mysql.createConnection({
     port:20974
 })
 
+app.get("/helloWorld",(req,res)=>{
+    return res.json();
+})
+
 
 //AUTHEN ---------------------------------
 
