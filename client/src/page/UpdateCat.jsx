@@ -7,7 +7,7 @@ function UpdateCat() {
     const location = useLocation()
     const catId = location.pathname.split("/")[2]
     const [cats, setCats] = useState([])
-    // const navigate=useNavigate()
+    const navigate=useNavigate()
 
     const [values, setValues] = useState({
         name: '',
@@ -42,7 +42,7 @@ function UpdateCat() {
         axios.put(import.meta.env.VITE_REACT_APP_API_URL + `/updateCat/${catId}`, formData)
         .then((res)=>{
             console.log(res)
-            // navigate('/')
+            navigate('/')
         }) 
         .catch(err => {
             console.log(err)
