@@ -15,8 +15,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.use(cors({
-    origin: ["https://cat-gallery-crud.vercel.app"],
-    methods: ["POST", "GET", "PUT", "DELETE"],
+    origin: "https://cat-gallery-crud.vercel.app",
     credentials: true 
     
 }));
